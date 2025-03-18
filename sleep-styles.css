@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F4D8FF; /* Цвет текста */
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.night-sky {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('back.jpg') no-repeat center center fixed; /* Фоновый GIF */
+    background-size: cover; /* Фон покрывает весь экран */
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.moon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 #f0f0f0;
+    transform: rotate(-45deg);
+    animation: moonGlow 3s infinite ease-in-out;
+}
+
+@keyframes moonGlow {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(240, 199, 255, 0.8); /* Основная плашка (F0C7FF с прозрачностью) */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #F4D8FF; /* Цвет текста */
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    background: #8968D6; /* Цвет шкалы прогресса */
+    height: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    background: #C295F6; /* Цвет заполненной части шкалы */
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.question {
+    background: #C295F6; /* Мини-плашка (C295F6) */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.answer-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #F0C7FF; /* Основная плашка */
+    border: 2px solid #C295F6; /* Граница кнопки */
+    color: #8968D6; /* Цвет текста на кнопке */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+    background: #C295F6; /* Цвет при наведении */
+    transform: scale(1.02);
+}
+
+.recommendation {
+    background: #C295F6; /* Мини-плашка (C295F6) */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.start-btn, .restart-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #F0C7FF; /* Основная плашка */
+    color: #8968D6; /* Цвет текста на кнопке */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.start-btn:hover, .restart-btn:hover {
+    background: #C295F6; /* Цвет при наведении */
+}
