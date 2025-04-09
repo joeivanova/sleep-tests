@@ -247,4 +247,5 @@ document.addEventListener('DOMContentLoaded', () => {
         questionContainer.classList.remove('hidden');
         showQuestion();
     });
+    
 });

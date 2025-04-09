@@ -4,16 +4,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #F4D8FF; /* Цвет текста */
     line-height: 1.6;
-    overflow: hidden;
+    background: url('back.jpg') no-repeat center center fixed; /* Переносим фон сюда */
+    background-size: cover;
+    min-height: 100vh; /* Гарантируем минимальную высоту */
 }
 
 .night-sky {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background: url('back.jpg') no-repeat center center fixed; /* Фоновый GIF */
-    background-size: cover; /* Фон покрывает весь экран */
-    overflow: hidden;
+    min-height: 100vh; /* Заменяем height на min-height */
+    overflow: hidden; /* Оставляем, чтобы звёзды не выходили за границы */
 }
 
 .stars {
@@ -63,15 +63,17 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 30px;
-    background: rgba(240, 199, 255, 0.8); /* Основная плашка (F0C7FF с прозрачностью) */
+    background: rgba(240, 199, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-size: 2.0rem;
 }
 
 h1 {
     text-align: center;
     color: #F4D8FF; /* Цвет текста */
     margin-bottom: 30px;
+    font-size: 1.5rem;
 }
 
 .progress-bar {
@@ -106,6 +108,7 @@ h1 {
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 1.5rem;
 }
 
 .answer-btn:hover {
@@ -134,10 +137,13 @@ h1 {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.5rem;
     transition: background 0.3s ease;
 }
 
 .start-btn:hover, .restart-btn:hover {
     background: #C295F6; /* Цвет при наведении */
+}
+html {
+    scroll-behavior: smooth;
 }
